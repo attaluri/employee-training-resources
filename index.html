@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Training Portal - Welcome</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .portal {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 400px;
+        }
+        .logo { font-size: 60px; margin-bottom: 20px; }
+        h1 { color: #333; margin-bottom: 10px; font-size: 24px; }
+        p { color: #666; margin-bottom: 30px; line-height: 1.6; }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="portal">
+        <div class="logo">📚</div>
+        <h1>Training Portal</h1>
+        <p>Access your corporate learning modules and professional development resources.</p>
+        
+        <!-- THE HIDDEN GATEWAY - This looks like a login but opens the streaming app -->
+        <button class="btn btn-primary" onclick="enterPortal()">Access Learning Modules</button>
+        <button class="btn btn-secondary" onclick="showDocs()">Documentation</button>
+        
+        <div class="footer">© 2024 Corporate Training Systems</div>
+    </div>
+
+    <script>
+        // Hidden functionality - appears to be auth but actually loads streaming
+        function enterPortal() {
+            // This loads your actual streaming page from a secret location
+            // We'll set this up in Step 4
+            window.open('https://YOUR_USERNAME.github.io/employee-training-resources/app', '_blank');
+        }
+        
+        function showDocs() {
+            alert('Documentation module coming soon!');
+        }
+        
+        // Secret keyboard shortcut - press Ctrl+Shift+L to open directly
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.shiftKey && e.key === 'L') {
+                enterPortal();
+            }
+        });
+    </script>
+</body>
+</html>
